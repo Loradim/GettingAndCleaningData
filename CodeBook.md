@@ -23,25 +23,25 @@ Tidying data for "output.txt":
 ------------------------------
 (For simplicity I will only describe the steps for the train data, but the steps are the same for test data)
 
-l. X_train.txt is read. This file contains all observations, but is missing descriptive labels aswell as
+1. X_train.txt is read. This file contains all observations, but is missing descriptive labels aswell as
      the subject ID the observation is for and the activity that was done to get this observation
-l. y_train.txt is read. Each row in this file contains an activity number that corresponds to the row ob
+1. y_train.txt is read. Each row in this file contains an activity number that corresponds to the row ob
      observations in X_train.txt. These numbers are added and translated with "activity_labels.txt" to not
      give a numeric representation of the activity, but instead a meaningful description.
      This textual description is added to a new column called activity
-l. subject_train.txt is read. Each row in this file corresponds to a row in X_train.txt and contains the
+1. subject_train.txt is read. Each row in this file corresponds to a row in X_train.txt and contains the
      subjectid for which this observation is for. This information is added to a new column called subjectid
-l. Another column called source is added and filled with "train" for the training set directory and "test" for
+1. Another column called source is added and filled with "train" for the training set directory and "test" for
      the test directory.
-l. Data for training and test directory is combined and saved to "output.txt"
+1. Data for training and test directory is combined and saved to "output.txt"
 
 Tidying data for "output_avg_per_subject_and_per_activity.csv":
 ---------------------------------------------------------------
-l. Data from output.txt is used
-l. Column "source" is removed, so we can get avg on all variables regardless of source
-l. Data is grouped by activity and subjectid, so we can avg per subject and per activity
-l. All columns are summarized with mean()
-l. Data is saved to "output_avg_per_subject_and_per_activity.csv"
+1. Data from output.txt is used
+1. Column "source" is removed, so we can get avg on all variables regardless of source
+1. Data is grouped by activity and subjectid, so we can avg per subject and per activity
+1. All columns are summarized with mean()
+1. Data is saved to "output_avg_per_subject_and_per_activity.csv"
 
 Description of columns:
 -----------------------
